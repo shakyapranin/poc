@@ -1,12 +1,6 @@
-# README #
+# Broadcast Application
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
-### What is this repository for? ###
-
-* Javascript application to replicate functionality (audio,video and screensharing) to mimic Appear.in and suggestive functions from Lookback.
-* 1.0
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Javascript application to replicate functionality (audio,video and screensharing) to mimic Appear.in and suggestive functions from Lookback.
 
 ### How do I get set up? ###
 
