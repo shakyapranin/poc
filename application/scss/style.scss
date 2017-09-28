@@ -1,0 +1,126 @@
+
+$screenHeight : 45vh;
+$defaultDisplay : none;
+.webcam{
+  width:100%;
+  height:$screenHeight;
+}
+.screenshare{
+  height: $screenHeight;
+  width:100%;
+}
+.narrowMargin{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#video_canvas {
+  //height : $screenHeight; CSS WONT WORK AS MANIPULATED BY DRAW FUNCTION
+  //width : 100%; CSS WONT WORK AS MANIPULATED BY DRAW FUNCTION
+}
+
+*{
+	outline: none;
+}
+
+body{
+	background-color: #eee;
+}
+
+
+.jumbotron{
+
+	#elementToShare{
+		margin-top:20px;
+	}
+	text-align: center;
+	padding: 20px 0 0 0;
+  margin: 0;
+	h2[contenteditable="false"]{
+		font-size:23px;
+	}
+	h2{
+		margin-top:0;
+	}
+
+	a.links{
+		display: inline-block;
+		margin: 15px;
+		cursor: pointer;
+	}
+	button{
+		display: inline-block;
+		margin: 0 5px;
+	  color: #333;
+	  background-color: #eee;
+	  box-shadow: inset 0 0 0 1px #333;
+	  border: none;
+
+			  &:hover{
+		  box-shadow: inset 0 0 0 1px #333,0 5px 15px #666;
+		}
+
+		&:focus{
+		  box-shadow: inset 0 0 0 1px #333,inset 0 5px 30px #666;
+		}
+		.glyphicon{
+			padding-right: 5px;
+		}
+	}
+
+.experiment{
+		margin: 0 15px;
+		ol{
+			padding-left: 15px;
+			display: inline-block;
+			text-align: left;
+			li{
+				margin: 10px 0 15px 0;
+			}
+		}
+	}
+
+	.button{
+			@extend button;
+			padding: 10px;
+			span{
+				padding-right: 5px;
+			}
+			&:hover{
+				text-decoration: none;
+			}
+		}
+
+}
+
+#pause,#resume,#stop{
+  display: none;
+}
+
+span.title {
+  font-weight: 500;
+  font-size:20px;
+}
+
+#overlay{
+  // display:none; // Display loader on start before window.onload
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #1abc9c;
+  opacity: 0.99;
+}
+
+h2#message{
+  display : none;
+}
+
+#compilemessage{
+	display: none;
+}
+
+.videoControls{
+	margin-bottom:10px;
+}

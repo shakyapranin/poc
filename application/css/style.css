@@ -1,0 +1,84 @@
+.webcam {
+  width: 100%;
+  height: 45vh; }
+
+.screenshare {
+  height: 45vh;
+  width: 100%; }
+
+.narrowMargin {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+* {
+  outline: none; }
+
+body {
+  background-color: #eee; }
+
+.jumbotron {
+  text-align: center;
+  padding: 20px 0 0 0;
+  margin: 0; }
+  .jumbotron #elementToShare {
+    margin-top: 20px; }
+  .jumbotron h2[contenteditable="false"] {
+    font-size: 23px; }
+  .jumbotron h2 {
+    margin-top: 0; }
+  .jumbotron a.links {
+    display: inline-block;
+    margin: 15px;
+    cursor: pointer; }
+  .jumbotron button, .jumbotron .button {
+    display: inline-block;
+    margin: 0 5px;
+    color: #333;
+    background-color: #eee;
+    box-shadow: inset 0 0 0 1px #333;
+    border: none; }
+    .jumbotron button:hover, .jumbotron .button:hover {
+      box-shadow: inset 0 0 0 1px #333,0 5px 15px #666; }
+    .jumbotron button:focus, .jumbotron .button:focus {
+      box-shadow: inset 0 0 0 1px #333,inset 0 5px 30px #666; }
+    .jumbotron button .glyphicon, .jumbotron .button .glyphicon {
+      padding-right: 5px; }
+  .jumbotron .experiment {
+    margin: 0 15px; }
+    .jumbotron .experiment ol {
+      padding-left: 15px;
+      display: inline-block;
+      text-align: left; }
+      .jumbotron .experiment ol li {
+        margin: 10px 0 15px 0; }
+  .jumbotron .button {
+    padding: 10px; }
+    .jumbotron .button span {
+      padding-right: 5px; }
+    .jumbotron .button:hover {
+      text-decoration: none; }
+
+#pause, #resume, #stop {
+  display: none; }
+
+span.title {
+  font-weight: 500;
+  font-size: 20px; }
+
+#overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #1abc9c;
+  opacity: 0.99; }
+
+h2#message {
+  display: none; }
+
+#compilemessage {
+  display: none; }
+
+.videoControls {
+  margin-bottom: 10px; }

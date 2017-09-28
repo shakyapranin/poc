@@ -1,0 +1,33 @@
+{
+  "name": "screendemo",
+  "version": "1.0.0",
+  "description": "This is javascript application developed to mimic functionality (audio,video and screen sharing) similar to appear.in with some suggested functionality from lookback",
+  "scripts": {
+    "start" : "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/praninview9/screendemo.git"
+  },
+  "dependencies": {
+    "socket.io": "0.9.17",
+    "express" : "4.13.4"
+  },
+  "author": "view9",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/praninview9/screendemo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.9",
+    "gulp-minify": "0.0.11",
+    "gulp-sass": "^2.3.1",
+    "gulp-serve": "^1.2.0",
+    "serve": "^1.4.0"
+  },
+  "engines": {
+    "node": "6.0.0"
+  }
+}

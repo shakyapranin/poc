@@ -1,0 +1,115 @@
+<html>
+
+<head>
+	<link type="text/css" href="dist/css/lib/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="dist/css/lib/bootstrap-glyphicons.css" rel="stylesheet">
+	<link type="text/css" href="dist/css/style.css" rel="stylesheet">
+	<link type="text/css" href="dist/css/overlay.css" rel="stylesheet">
+	<link type="text/css" href="dist/css/broadcast.css" rel="stylesheet">
+
+	<!-- USE DIST--><script src="dist/js/RecordRTC.js"></script><!--Script for approach 2-->
+	<!-- USE DIST--><script type="text/javascript" src="dist/js/getScreenId.js"></script><!--JS for screen sharing using firefox and chrome extensions-->
+	<!-- USE DIST--><script type="text/javascript" src="dist/js/DetectRTC.js"></script><!--Detecting WebRTC logic to pair with sharing data-->
+	<!-- USE DIST--><script type="text/javascript" src="dist/js/extensions.js"></script><!--Extension code for Screen sharing-->
+	<!-- USE DIST--><script type="text/javascript" src="dist/js/main.js"></script>
+	<!-- <script type="text/javascript" src="js/canvas.js"></script>--><!-- This script is used to combine two vdo tags into a single canvas-->
+
+	<!--Scripts for recording div by Muaz Khan-->
+	<!-- USE DIST--><script src="dist/js/screenshot.js"></script>
+	<!-- USE DIST--><script src="dist/js/gumadapter.js"></script>
+	<!--Scripts for recording div by Muaz Khan-->
+
+</head>
+
+<body>
+	<div class="jumbotron">
+		<div class="row narrowMargin videoControls">
+			<div class="col-md-12">
+				<span class="title">Video Recording</span><br>
+				<!-- BUTTON CONTROLS FOR VIDEO SAVING-->
+				<button id="start" contenteditable="false"><span class="glyphicon glyphicon-play"></span>Start</button>
+				<button id="pause" contenteditable="false"><span class="glyphicon glyphicon-pause"></span>Pause</button>
+				<button id="resume" contenteditable="false"><span class="glyphicon glyphicon-play"></span>Resume</button>
+				<button id="stop" contenteditable="false"><span class="glyphicon glyphicon-save"></span>Save</button>
+				<!--<canvas id="video_canvas" width="1800px" height="600px"></canvas>--><!--This canvas is used to display combined video results-->
+			</div>
+		</div>
+		<div class="row narrowMargin">
+			<div class="col-md-12">
+				<div class="make-center">
+					<input type="text" id="room-id" value="abcdef">
+					<!--<button id="open-room" contenteditable="false">Open Room</button>-->
+					<button id="join-room" contenteditable="false">Join Room</button>
+					<button id="open-or-join-room" contenteditable="false">Auto Open Or Join Room</button>
+					<div id="room-urls" style=""></div>
+				</div>
+			</div>
+		</div>
+			<div class="row narrowMargin" contenteditable id="elementToShare">
+					<div class="col-md-5" id="webcam" contenteditable="false">
+						<!--<video id="webcamVideo" controls loop autoplay class="webcam">Your browser does not support the video tag.</video>-->
+					</div>
+					<div class="col-md-7" id="screenshare">
+						<video id="screenshareVideo" muted controls loop autoplay class="screenshare">Your browser does not support the video tag.</video>
+					</div>
+				<br>
+			</div>
+
+			<div class="row narrowMargin">
+					<div class="col-md-5">
+						<a id="share_webcam" class="links button"><span class="glyphicon glyphicon-ok"></span>Select Webcam Source</a>
+					</div>
+					<div class="col-md-7">
+						<a id="share_screen" class="links button"><span class="glyphicon glyphicon-ok"></span>Select Window Source</a>
+					</div>
+				<br>
+			</div>
+		<div class="row narrowMargin">
+			<h2 id="message"></h2>
+			<section class="experiment">
+				<span class="title">Prerequisites</span><br>
+				<ol>
+							<li>
+									Chrome?
+									<a href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk" target="_blank">Click to install extension</a>
+							</li>
+
+							<li>
+									Firefox?
+									 <a href="https://addons.mozilla.org/en-US/firefox/addon/enable-screen-capturing/" target="_blank">Click to install extension</a>
+							</li>
+					</ol>
+			</section>
+			</div>
+	</div>
+	<div id="overlay"><!-- Loader div-->
+		<div class="sk-circle">
+			<div class="sk-circle1 sk-child"></div>
+			<div class="sk-circle2 sk-child"></div>
+			<div class="sk-circle3 sk-child"></div>
+			<div class="sk-circle4 sk-child"></div>
+			<div class="sk-circle5 sk-child"></div>
+			<div class="sk-circle6 sk-child"></div>
+			<div class="sk-circle7 sk-child"></div>
+			<div class="sk-circle8 sk-child"></div>
+			<div class="sk-circle9 sk-child"></div>
+			<div class="sk-circle10 sk-child"></div>
+			<div class="sk-circle11 sk-child"></div>
+			<div class="sk-circle12 sk-child"></div>
+		</div>
+		<div class="text-holder" id="compilemessage">Please wait while the video is compiling..</div>
+	</div>
+</body>
+<!--Script for canvas recording by Muaz Khan-->
+<!-- USE DIST--><script type="text/javascript" src="dist/js/record.js"></script>
+<script src="js/lib/ffmpeg_asm.js"></script>
+<!--Script for canvas recording by Muaz Khan-->
+
+<!-- Script for broadcasting by Muaz Khan-->
+<script src="/js/lib/rmc3.min.js"></script>
+<!-- socket.io for signaling -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="/dist/js/broadcast.js"></script>
+<!-- Script for broadcasting by Muaz Khan-->
+
+</html>
